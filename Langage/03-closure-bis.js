@@ -22,3 +22,10 @@ for (var i=0; i<3; i++) {
 for (var i=0; i<3; i++) {
   setTimeout(externe(i), 1000);
 }
+
+// Dans 1sec 0 1 2
+for (let i=0; i<3; i++) {
+  setTimeout(() => {
+    console.log(i);
+  }, 1000);
+}

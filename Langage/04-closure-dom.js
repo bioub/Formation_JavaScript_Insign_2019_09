@@ -3,9 +3,9 @@ function createButton(value) {
   btn.innerText = value;
   document.body.appendChild(btn);
 
-  btn.addEventListener('click', function() {
+  btn.addEventListener('click', (event) => {
     console.log(value);
-    btn.innerText += '.';
+    event.target.innerText += '.';
   });
 }
 
