@@ -1,3 +1,5 @@
+import { prependChild } from "./dom";
+
 /**
  * @param {object} todo 
  * @param {number} todo.id 
@@ -5,11 +7,12 @@
  * @param {boolean} todo.completed 
  * @param {HTMLElement} container 
  */
-function addTodo(todo, container) {
+export function addTodo(todo, container) {
   const rowElt = document.createElement('div');
 
   const checkbox = document.createElement('input');
   checkbox.type = 'checkbox';
+  checkbox.className = 'todo-completed';
   checkbox.checked = todo.completed;
   rowElt.appendChild(checkbox);
 
@@ -24,3 +27,4 @@ function addTodo(todo, container) {
 
   prependChild(container, rowElt);
 }
+

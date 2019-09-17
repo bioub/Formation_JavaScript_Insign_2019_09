@@ -1,4 +1,4 @@
-async function fetchTodos() {
+export async function fetchTodos() {
   const url = 'https://jsonplaceholder.typicode.com/todos';
 
   const response = await fetch(url);
